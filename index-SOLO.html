@@ -54,6 +54,20 @@
   </div>
 
 <script>
+    const nav = document.getElementById('main')
+
+    function stickyNav () {
+        console.log(window.scrollY, nav.offsetTop)
+        if (window.scrollY >= nav.offsetTop){
+            nav.classList.add('fixed-nav')
+        } else {
+            nav.classList.remove('fixed-nav')
+
+        }
+    }
+
+    document.addEventListener('scroll', stickyNav)
+
 </script>
 
 </body>
